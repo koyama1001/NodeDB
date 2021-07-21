@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link  type="text/css" rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<title>WebWork</title>
+<body>
+<nav>
+  <h4>Login</h4>
+  <ul>
+    <li><a href="/">WebWork</a></li>
+   
+  </ul>
+</nav>
+<div class="container">
+    <span id="view_time"></span>
+
+</div>
+    <script type="text/javascript">
+    document.getElementById("view_time").innerHTML = getNow();
+    
+    function getNow() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var mon = now.getMonth()+1; //１を足すこと
+        var day = now.getDate();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+    
+        //出力用
+        var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒"; 
+        return s;
+    }
+    </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

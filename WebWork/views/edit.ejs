@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Anime Edit</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">データ更新フォーム</div>
+            <div class="panel-body">
+    
+    <form action="/update/<%= works[0].id %>" method="POST">
+        <div class="form-group">
+        日 <input class="form-control" type="text" name="date" value="<%= works[0].date %>"><br>
+        出勤時間 <input class="form-control" type="text" name="start_time" value="<%= works[0].start_time %>"><br>
+        退勤時間 <input class="form-control" type="text" name="end_time" value="<%= works[0].end_time %>"><br>
+        休憩時間 <input class="form-control" type="text" name="break_time" value="<%= works[0].break_time %>"><br>
+    </div>
+   
+        
+        <button type="submit" class="btn btn-primary"onclick='return confirm("更新してもよろしいですか？");' >更新</button>
+        </div>
+    </form>    
+        </div>
+    </div>
+</body>
+</html>
